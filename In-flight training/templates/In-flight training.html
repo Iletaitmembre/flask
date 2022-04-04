@@ -1,0 +1,14 @@
+{% extends "base.html" %} 
+
+
+{% block content %}
+
+{% if 'инженер' in occupation or 'строитель' in occupation %}
+<h2>Инженерные тренажеры</h2>
+<img align="middle" src="{{ url_for('static', filename='img/eng.png') }}">
+{% else %}
+<h2>Научные симуляторы</h2>
+<img src="{{ url_for('static', filename='img/sci.png') }}" style="text-align: center;">
+{% endif %}
+
+{% endblock %}
