@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+
+{% block content %}
+<link
+      rel="stylesheet"
+      type="text/css"
+      href="{{ url_for('static', filename='css/auto_answer.css') }}"
+    />
+{% set titles = {'surname': 'Фамилия', 'name': 'Имя', 'education': 'Образование', 'job': 'Профессия',
+'sex': 'Пол', 'motivation': 'Мотивация', 'accept': 'Готовы остаться на Марсе?'} %}
+
+{% for value in titles%}
+<p class="center"><h4>{{ titles[value] }}: {{ data[value] }}</h4></p>
+{% endfor %}
+
+{% endblock %}
